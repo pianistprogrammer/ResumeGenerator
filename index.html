@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <link data-require="fontawesome@4.5.0" data-semver="4.5.0" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8"
+        src="https://code.angularjs.org/1.4.8/angular.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js" data-semver="2.1.4" data-require="jquery@*"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" data-semver="3.3.6"
+        data-require="bootstrap@3.3.6"></script>
+
+    <link rel="stylesheet" href="css/multistep.min.css">
+    <link rel="stylesheet" href="css/angular-moment-picker.min.css">
+    <link rel="stylesheet" href="css/smart_wizard_theme_arrows.min.css">
+    <link href="css/newstyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/print.css">
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <div validation-wizard waiting="{{waiting}}" ng-controller="WizardController" class="container">
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+
+                <span class="panel-title pn">Simple Resume Creator</span>
+
+            </div>
+
+            <div class="panel-body js-wizard-validation">
+                <div class="js-wizard-validation block tab-struct custom-tab-1">
+                    <!-- Step Tabs -->
+                    <ul class="nav nav-tabs step-anchor">
+                        <li class="active">
+                            <a class="inactive" href="#step1" data-toggle="tab">Step 1 </a>
+                        </li>
+                        <li>
+                            <a class="inactive" href="#step2" data-toggle="tab">Education</a>
+                        </li>
+                        <li>
+                            <a class="inactive" href="#step3" data-toggle="tab">Work Experience</a>
+                        </li>
+                        <li>
+                            <a class="inactive" href="#step4" data-toggle="tab">Skill set</a>
+                        </li>
+                        <li>
+                            <a class="inactive" href="#step5" data-toggle="tab">Hobbies</a>
+                        </li>
+                        <li>
+                            <a class="inactive" href="#step6" data-toggle="tab">Summary</a>
+                        </li>
+
+                    </ul>
+                    <form class="js-form2 form-horizontal" style="margin-top:40px">
+                        <div class="alert alert-danger" ng-show="errors.length">
+                            <ul>
+                                <li ng-repeat="error in errors track by $index">{{error}}</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade fade-right in push-30-t push-50 active" id="step1">
+
+                                <ng-include src="'/cv/pages/personal.html'"></ng-include>
+
+                            </div>
+                            <div class="tab-pane fade fade-right in push-30-t push-50" id="step2">
+                                <ng-include src="'/cv/pages/education.html'"></ng-include>
+                            </div>
+                            <div class="tab-pane fade fade-right in push-30-t push-50" id="step3">
+                                <ng-include src="'/cv/pages/company.html'"></ng-include>
+                            </div>
+                            <div class="tab-pane fade fade-right in push-30-t push-50" id="step4">
+                                <ng-include src="'/cv/pages/skills.html'"></ng-include>
+                            </div>
+                            <div class="tab-pane fade fade-right in push-30-t push-50" id="step5">
+                                <ng-include src="'/cv/pages/hobbies.html'"></ng-include>
+                            </div>
+                            <div class="tab-pane fade fade-right in push-30-t push-50" id="step6">
+                                    <ng-include src="'/cv/pages/summary.html'"></ng-include>
+                                </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="block-content block-content-mini block-content-full border-t">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <button class="wizard-prev btn btn-warning" type="button"><i
+                                            class="fa fa-arrow-circle-o-left"></i>
+                                        Previous</button>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <button class="wizard-next btn btn-success" type="button">Next <i
+                                            class="fa fa-arrow-circle-o-right"></i></button>
+                                    <button class="wizard-finish btn btn-primary" type="submit"><i
+                                            class="fa fa-check-circle-o"></i>
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/external/slick/slick.min.js"></script>
+    <script src="js/external/countto/jquery.countTo.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/external/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/external/form/jquery.validate.min.js"></script>
+    <script src="js/waitMe.min.js"></script>
+
+    <script src="js/external/form/jquery.form.js"></script>
+    <script src="js/jquery.bootstrap.wizard.min.js"></script>
+    <script src="js/Scripts/plugin/waitMe.min.js"></script>
+    <!-- <script src="js/Scripts/angular/angularjs/angular.min.js"></script> -->
+    <script src="js/Scripts/angular/angular-animate.min.js"></script>
+    <script src="js/Scripts/angular/angular-sanitize.js"></script>
+    <script src="js/Scripts/angular/angular-resource.js"></script>
+    <script src="js/Scripts/angular/angular-route.js"></script>
+    <script src="js/Scripts/angular/ngProgress.js"></script>
+    <script src="js/Scripts/angular/plugins/angular-ui-router.min.js"> </script>
+    <script src="js/Scripts/angular/ui-bootstrap-tpls-0.12.1.js"></script>
+    <script src="js/Scripts/angular/dist/ng-file-upload-shim.min.js"></script>
+    <script src="js/Scripts/angular/dist/ng-file-upload.min.js"></script>
+    <script src="js/Scripts/angular/statehelper.min.js"></script>
+    <script src="js/Scripts/angular/angular-toastr.tpls.js"></script>
+    <script src="js/Scripts/angular/angular-moment-picker.min.js"></script>
+    <script>
+        var app = angular.module("app",
+            [
+                "ui.router",
+                "ui.bootstrap",
+                "ngSanitize",
+                'ui.router.stateHelper',
+                'ngResource',
+                'ngRoute',
+                'moment-picker'
+            ]);
+    </script>
+    <script src="js/wizardValidation.js"></script>
+    <script src="js/waiting.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

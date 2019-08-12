@@ -1,0 +1,166 @@
+<div class="container-fluid" id="printSection">
+    <div class="row" id="inner-p">
+        <div class="row" style="border:1px solid #ddd">
+            <div class="col-md-8">
+                <p ng-style="{'color':item.color}"
+                    style="padding-left:20px;padding-top: 24px;padding-bottom:24px;font-size: 23px;">
+                    {{item.firstName}} {{item.lastName}}
+                </p>
+
+            </div>
+            <div class="col-md-4" ng-style="{'background-color':item.color}" style="height:90px;"></div>
+        </div>
+        <div class="row" style="background-color:#f2f7fb">
+            <div class="col-md-12">
+                <p style="padding-left:20px;padding-top: 24px;padding-bottom:10px;font-size: 17px;color: #141414;">
+                    {{item.shortBio}}
+                </p>
+
+            </div>
+
+        </div>
+        <div class="row" style="background-color:#f2f7fb">
+            <div class="col-md-8" style="background-color:#fff">
+                <p ng-style="{'border-bottom-color':item.color}"
+                    style="border-bottom: 2px solid ;padding-left:20px;padding-top: 20px;padding-bottom:10px;font-size: 17px;color: #141414;font-weight:700">
+                    PROFILE
+                </p>
+                <p style="padding-left:20px;padding-top: 10px;padding-bottom:10px;padding-right: 10px;">
+                    {{item.personalProfile}}
+
+                </p>
+
+                <p ng-style="{'border-bottom-color':item.color}"
+                    style="border-bottom: 2px solid;padding-left:20px;padding-top: 20px;padding-bottom:10px;font-size: 17px;color: #141414;font-weight:700">
+                    WORK EXPERIENCE
+                </p>
+                <div class="work" ng-repeat="work in item.companies">
+                    <div class="col-md-3" style="padding-left:20px">
+                        {{work.companyDateFrom}} - {{work.companytillDate == true ? 'Till date': work.companyDateTo}}
+                    </div>
+                    <div class="col-md-9">
+                        <p style="font-weight:600;font-size:16px">
+                            {{work.companyRole}}
+                        </p>
+                        <p style="font-weight:500;font-size:14px">
+                            {{work.companyName}}
+                        </p>
+                        <p style="margin-bottom:30px;">
+                            {{work.personalAchievements}}
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <p ng-style="{'border-bottom-color':item.color}"
+                    style="border-bottom: 2px solid;padding-left:20px;padding-top: 20px;padding-bottom:10px;font-size: 17px;color: #141414;font-weight:700">
+                    EDUCATION
+                </p>
+                <div class="edu" ng-repeat="edu in item.institutions">
+                    <div class="col-md-3" style="padding-left:20px">
+                        {{edu.institutionDateFrom}} - {{edu.tillDate == true ? 'Till date': edu.institutionDateTo}}
+                    </div>
+                    <div class="col-md-9">
+                        <p style="font-weight:600;font-size:16px">
+                            {{edu.institutionTitle}}
+                        </p>
+                        <p style="font-weight:500;font-size:14px">
+                            {{edu.institutionName}}
+                        </p>
+                        <p style="margin-bottom:30px">
+                            {{edu.description}}
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4" style="padding-left:0;padding-right:0">
+                <div style="padding:0 20px">
+                    <p class="text-center" style="text-align:center">
+                        <a href="#" class="">
+                            <img style="width: 250px;height: 250px;" ng-src="{{item.imageSrc}}" alt="Profile Picture">
+                        </a>
+                    </p>
+                    <div class="" style="margin-top:20px">
+                        <p>
+                            <span style="width:8%" class="fa fa-map-marker"></span> <span>{{item.streetAddress}}</span>
+                        </p>
+                        <p>
+                            <span style="width:8%" class="fa fa-phone"></span> <span>{{item.phoneNumber}}</span>
+                        </p>
+                        <p>
+                            <span style="width:8%" class="fa fa-envelope-o"></span> <span>{{item.email}}</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="detail"
+                    style="font-weight:700;font-size:17px;background-color:#e6ebf0;padding-left:20px;padding-top:5px;padding-bottom:10px">
+                    DETAILS
+                </div>
+                <div style="padding:20px">
+
+                    <div class="">
+                        <p>
+                            <span style="width:10%">Date of Birth:</span> <span>{{item.dob}}</span>
+                        </p>
+                        <p>
+                            <span style="width:10%">Nationality:</span> <span>{{item.nationality}}</span>
+                        </p>
+                        <p>
+                            <span style="width:10%">Gender:</span> <span>{{item.gender.label}}</span>
+                        </p>
+                        <p>
+                            <span style="width:10%">Marrital Status:</span> <span>{{item.maritalStatus.label}}</span>
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="detail"
+                    style="font-weight:700;font-size:17px;background-color:#e6ebf0;padding-left:20px;padding-top:5px;padding-bottom:10px">
+                    HOBBIES
+                </div>
+                <div style="padding:20px">
+
+                    <div class="">
+                        <ul style="list-style: none; margin-left:-17px">
+                            <li style="padding-bottom:10px" ng-repeat="hobby in item.hobbies">
+                                {{hobby.hobbyName}}
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="detail"
+                    style="font-weight:700;font-size:17px;background-color:#e6ebf0;padding-left:20px;padding-top:5px;padding-bottom:10px">
+                    TECHNICAL SUMMARY
+                </div>
+                <div style="padding:20px">
+
+                    <div class="">
+                        <ul style="list-style: none; margin-left:-17px">
+                            <li style="padding-bottom:10px" ng-repeat="skill in item.skills">
+                                {{skill.skillName}}
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar"
+                                        aria-valuenow="{{skill.skillPecentage}}" aria-valuemin="0" aria-valuemax="100"
+                                        ng-style="{ 'width': skill.skillPecentage + '%' }">
+                                        {{skill.skillPecentage}}%
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

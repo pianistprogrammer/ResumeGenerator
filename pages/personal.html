@@ -1,0 +1,171 @@
+<div class="container-fluid">
+    <!-- title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ms-title ms-card">Personal Details</div>
+        </div>
+    </div>
+    <!-- content -->
+    <form action="">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ms-card">
+                    <!-- personal information -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5 class="ms-subtitle">Personal Information</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h5 class="col-sm-4 ms-subtitle">Profile Image</h5>
+                        <div class="col-sm-8">
+
+                            <input type="file" ng-file-select="onFileSelect($files)" ng-model="item.imageSrc">
+                            <img class="image_profile" ng-src="{{item.imageSrc}}" />
+
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span class="ms-field-title">First Name<sup>*</sup></span>
+                                <input name="item.firstName" ng-model="item.firstName" data-ms class="ms-input" type="text"
+                                    regex="alphaWithSpace" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Other Name<sup>*</sup></span>
+                                <input name="item.otherName" ng-model="item.otherName" data-ms class="ms-input" type="text"
+                                    regex="alphaWithSpace" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Last Name<sup>*</sup></span>
+                                <input name="item.lastName" ng-model="item.lastName" data-ms class="ms-input" type="text"
+                                    regex="alphaWithSpace" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Profile Information -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5 class="ms-subtitle">Profile Information</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Personal Profile <sup>*</sup></span>
+                                <textarea name="item.personalProfile" ng-model="item.personalProfile" rows="4" data-ms class="ms-input"
+                                    type="text" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Short Bio <sup>*</sup></span>
+                                <input name="item.shortBio" ng-model="item.shortBio" placeholder="e.g Graphics Designer/ Web Dev" data-ms
+                                    class="ms-input" type="text" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- address -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5 class="ms-subtitle">Address</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Street Address<sup>*</sup></span>
+                                <input name="item.streetAddress" ng-model="item.streetAddress" data-ms class="ms-input" type="text" required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+
+                            <div class="ms-field">
+                                <span class="ms-field-title">DOB<sup>*</sup></span>
+                                <div style="width:100%" class="input-group" moment-picker="item.dob" format="DD-MM-YYYY">
+                                    <input name="item.dob" required class="ms-input" placeholder="Select a date" ng-model="item.dob"
+                                        ng-model-options="{ updateOn: 'blur' }">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Gender<sup>*</sup></span>
+                                <select required name="item.gender" class="ms-input" ng-model="item.gender"
+                                    ng-options="gender as gender.label for gender in item.genders">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Marital Status<sup>*</sup></span>
+                                <select required name="item.maritalStatus" class="ms-input" ng-model="item.maritalStatus"
+                                    ng-options="status as status.label for status in item.maritalStatuses">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contact information -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5 class="ms-subtitle">Contact Information</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Email Address<sup>*</sup></span>
+                                <input name="item.email" ng-model="item.email" data-ms class="ms-input" type="text" regex="email"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Phone Number<sup>*</sup></span>
+                                <input name="item.phoneNumber" ng-model="item.phoneNumber" data-ms class="ms-input" type="tel" regex="phone"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Nationality <sup>*</sup></span>
+                                <input name="item.nationality" ng-model="item.nationality" data-ms class="ms-input" type="text"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="ms-field">
+                                <span id="background" class="ms-field-title"> State<sup>*</sup></span>
+                                <input name="item.state" ng-model="item.state" data-ms class="ms-input" type="text"
+                                    required>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-4">
+                                <div class="">
+                                    <span class="ms-field-title"> Pick a color to customize<sup>*</sup></span>
+                                    <input type="color" ng-model="item.color">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

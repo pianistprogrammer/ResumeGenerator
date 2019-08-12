@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <!--  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" data-semver="3.3.6"-->
+  <!--    data-require="bootstrap-css@3.3.6" />-->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link data-require="fontawesome@4.5.0" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+  <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js" data-semver="2.1.4" data-require="jquery@*"></script>
+  <script src="js/bootstrap.min.js" data-semver="3.3.6" data-require="bootstrap@3.3.6"></script>
+  <link href="css/newstyle.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/multistep.min.css">
+  <link rel="stylesheet" href="css/angular-moment-picker.min.css">
+
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-4 left-side" style="background:#676565">
+      <div class="container-fluid">
+        <img class="profile-pic" ng-src="{{item.imageSrc}}" />
+        <!-- <img class="profile-pic" ng-src="Jeery.jpg" /> -->
+
+        <div class="row">
+          <h5 class="info-label" style="color:#fff">Info</h5>
+
+        </div>
+      </div>
+      <hr style="color:#fff" class="text-white">
+      <div class="">
+        <div class="info-block block-info clearfix">
+          <div class="square-box pull-left">
+            <span class="fa fa-user fa-2x"></span>
+          </div>
+          <h5 style="color:#fff"> Name</h5>
+          <h4 style="color:#d1d0d0">Tyreese Burn</h4>
+
+        </div>
+        <div class="info-block block-info clearfix">
+          <div class="square-box pull-left">
+            <span class="fa fa-map-marker fa-2x"></span>
+          </div>
+          <h5 style="color:#fff"> Address</h5>
+          <h4 style="color:#d1d0d0">23, David Alaka Street, Ikorodu, Lagos</h4>
+
+        </div>
+        <div class="info-block block-info clearfix">
+          <div class="square-box pull-left">
+            <span class="fa fa-phone fa-2x"></span>
+          </div>
+          <h5 style="color:#fff"> Phone</h5>
+          <h4 style="color:#d1d0d0">Tyreese Burn</h4>
+
+        </div>
+        <div class="info-block block-info clearfix">
+          <div class="square-box pull-left">
+            <span class="fa fa-envelope fa-2x"></span>
+          </div>
+          <h5 style="color:#fff"> Email</h5>
+          <h4 style="color:#d1d0d0">Tyreese Burn</h4>
+
+        </div>
+        <div class="info-block block-info clearfix">
+          <div class="square-box pull-left">
+            <span class="fa fa-globe fa-2x"></span>
+          </div>
+          <h5 style="color:#fff"> Website</h5>
+          <h4 style="color:#d1d0d0">Tyreese Burn</h4>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-md-8 right-side">
+      ncvbnbcbv
+    </div>
+
+  </div>
+
+  <script src="js/external/slick/slick.min.js"></script>
+  <script src="js/external/countto/jquery.countTo.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/external/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/external/form/jquery.validate.min.js"></script>
+  <script src="js/waitMe.min.js"></script>
+
+  <script src="js/external/form/jquery.form.js"></script>
+  <script src="js/jquery.bootstrap.wizard.min.js"></script>
+  <script src="js/Scripts/plugin/waitMe.min.js"></script>
+  <!-- <script src="js/Scripts/angular/angularjs/angular.min.js"></script> -->
+  <script src="js/Scripts/angular/angular-animate.min.js"></script>
+  <script src="js/Scripts/angular/angular-sanitize.js"></script>
+  <script src="js/Scripts/angular/angular-resource.js"></script>
+  <script src="js/Scripts/angular/angular-route.js"></script>
+  <script src="js/Scripts/angular/ngProgress.js"></script>
+  <script src="js/Scripts/angular/plugins/angular-ui-router.min.js"> </script>
+  <script src="js/Scripts/angular/ui-bootstrap-tpls-0.12.1.js"></script>
+  <script src="js/Scripts/angular/dist/ng-file-upload-shim.min.js"></script>
+  <script src="js/Scripts/angular/dist/ng-file-upload.min.js"></script>
+  <script src="js/Scripts/angular/statehelper.min.js"></script>
+  <script src="js/Scripts/angular/angular-toastr.tpls.js"></script>
+  <script src="js/Scripts/angular/angular-moment-picker.min.js"></script>
+  <script>
+    var app = angular.module("app",
+      [
+        "ui.router",
+        "ui.bootstrap",
+        "ngSanitize",
+        'ui.router.stateHelper',
+        'ngResource',
+        'ngRoute',
+        'moment-picker'
+      ]);
+  </script>
+  <script src="js/Validation.js"></script>
+  <script src="js/waiting.js"></script>
+
+  <script src="js/wizardValidation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

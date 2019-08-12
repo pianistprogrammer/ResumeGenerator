@@ -1,0 +1,51 @@
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ms-title ms-card">Hobbies</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="" ng-click="addHobby()" class="btn btn-success" style="color:#fff;margin-bottom:10px">
+                    Add Hobby
+                </a>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ms-card" ng-repeat="item in item.hobbies">
+                    <!-- more information -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h5 class="ms-subtitle">
+    
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="ms-field">
+                                <span class="ms-field-title">Hobby <sup>*</sup></span>
+                                <input name="item.hobbyName" ng-model="item.hobbyName" data-ms class="ms-input" type="text"
+                                    required>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <a href="" ng-show="$index>=1" ng-click="removeHobby($index)" class="btn btn-xs btn-danger"
+                                style="color: #fff">
+                                <span class="fa fa-trash-o"></span>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- company address -->
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
